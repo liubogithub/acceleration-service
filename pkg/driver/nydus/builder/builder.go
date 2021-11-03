@@ -69,6 +69,11 @@ func (builder *Builder) Run(option Option) ([]string, error) {
 		option.BlobDirPath,
 		"--source-type",
 		"diff",
+		"--diff-overlay-hint",
+		"--fs-version",
+		"6",
+		"--disable-check",
+		"--aligned-chunk",
 	}
 	args = append(args, option.DiffLayerPaths...)
 	args = append(args, option.HintLayerPaths...)
